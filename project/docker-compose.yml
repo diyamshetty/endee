@@ -1,0 +1,22 @@
+services:
+  endee:
+    image: endeeio/endee-server:latest
+    container_name: endee-server
+    ports:
+      - "8080:8080"
+    ulimits:
+      nofile: 100000
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "200m"
+        max-file: "5"
+    environment:
+      NDD_NUM_THREADS: 0      # 0 = auto-detect thread count
+      NDD_AUTH_TOKEN: ""      # empty = no auth required (dev mode)
+    volumes:
+      - endee-data:/data      # persist index data across restarts
+    restart: unless-stopped
+
+volumes:
+  endee-data:
