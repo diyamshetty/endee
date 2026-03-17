@@ -2,8 +2,6 @@
 
 A local, fully offline Retrieval-Augmented Generation (RAG) system for exploring recent ArXiv machine learning papers. Built with the **Endee Vector Database** to demonstrate a practical semantic search and RAG AI workflow.
 
-🌟 **If you find this useful, please star the official [Endee GitHub Repository](https://github.com/endee-io/endee)!**
-
 ---
 
 ## Project Overview
